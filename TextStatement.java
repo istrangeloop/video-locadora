@@ -15,17 +15,17 @@ public class TextStatement extends Statement {
             return result;
         }
 
-        private String formatName(String name){
+        public String formatName(String name){
             return "Rental Record for " + name +
                     "\n";
         }
 
-        private String formatRentalData(Rental movie){
+        public String formatRentalData(Rental movie){
             return "\t" + movie.getMovie().getTitle()+ "\t" +
                     String.valueOf(movie.getCharge()) + "\n";
         }
 
-        private String addFooter(Customer aCustomer){
+        public String addFooter(Customer aCustomer){
             return "Amount owed is " +
                     String.valueOf(aCustomer.getTotalCharge()) + "\n"
                     + "You earned " +
